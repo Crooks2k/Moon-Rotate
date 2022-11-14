@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width:100%;
+    font-family: 'Heebo', sans-serif
+}
+body{
+   background-color: black;
+}
+/*Header*/
+header{
+    position: static;
+}
+.nav-header{
+    color: white;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(253, 249, 249, 0.11);
+    margin: auto;
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+.links{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    z-index: 10;
+} 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#home:hover, #git:hover, #about:hover, #contact:hover{
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    width: 70px;
+}
+/*Images style*/
+#main{
+    overflow: hidden;
+}
+main img{
+    width: 100%;
+}
+#moon,#stars,#mountains{
+    position: absolute;
+}
+#moon{
+    position: fixed;
+    z-index: -2;
+}
+#stars{
+    top: -30%;
+    z-index: -3;
+    height: 600px;
+}
+#mountains{
+    z-index: -1;
+}
+/*Middle text*/
+h2{
+    position: absolute;
+    bottom: 10%;
+    left: 32%;
+    color: white;
+    font-weight: 900;
+    font-size: 50px;
+}
+/* Animations*/
+@keyframes animacion_rocas{
+    0%{
+        transform: translatey(20px);
+    }
+    20%{
+        transform: translatey(50px);
+    }
+    40%{
+        transform: translatey(70px);
+    }
+    60%{
+        transform: translatey(90px);
+    }
+    70%{
+    }
+}
+#stars{
+    transition: 3s all;
+    animation: 20s animacion_rocas alternate infinite;
+}
+@keyframes moon_animation{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+#moon{
+    animation: 20s moon_animation linear infinite;
+}
